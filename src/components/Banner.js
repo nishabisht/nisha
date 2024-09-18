@@ -6,9 +6,9 @@ import headerImg from "../assets/img/header-img.svg";
 
 export default function Banner() {
   const [toRotate, setToRotate] = useState([
+    "Software Engineer",
     "Application Support Engineer",
-    "Web Designer",
-    "Backend Developer",
+    "Full Stack Developer",
   ]);
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -61,10 +61,12 @@ export default function Banner() {
               <span className="wrap">{text}</span>
             </h1>
             <span className="gray">
-              Aspiring Software Engineer with experience in production support
-              and a background in Computer Science. Committed to delivering
-              high-quality software solutions through technical expertise and
-              innovative problem-solving.
+              Software engineer with 2 years of experience in software
+              engineering and production support. Proficient in developing and
+              troubleshooting Java applications, with a strong background in
+              computer science. Committed to delivering high-quality software
+              solutions through technical expertise and innovative
+              problem-solving
             </span>
             <button onClick={() => console.log("lets connect")}>
               Let's Connect <ArrowRightCircle size={25}></ArrowRightCircle>

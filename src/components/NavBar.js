@@ -3,7 +3,7 @@ import "../App.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../assets/img/logo.svg";
+import logo from "../img/profile.png";
 import Sicon1 from "../assets/img/nav-icon1.svg";
 import Sicon2 from "../assets/img/nav-icon2.svg";
 import Sicon3 from "../assets/img/nav-icon3.svg";
@@ -34,7 +34,8 @@ function NavBar() {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} />
+          <img src={logo} className="border bg-white rounded-circle" />
+          <span className="h4 text-white p-2">Nisha Bisht</span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav">

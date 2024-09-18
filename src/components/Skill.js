@@ -46,19 +46,19 @@ export default function Skill() {
               >
                 <div className="item">
                   <img src={meter1} alt="image" />
-                  <h5>web Developer</h5>
+                  <h5>Core/Advance Java</h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="image" />
-                  <h5>Brand Identify</h5>
+                  <h5>JavaScript</h5>
                 </div>
                 <div className="item">
                   <img src={meter3} alt="image" />
-                  <h5>Logo design</h5>
+                  <h5>Springboot</h5>
                 </div>
                 <div className="item">
                   <img src={meter1} alt="image" />
-                  <h5>Web Designer</h5>
+                  <h5>React</h5>
                 </div>
               </Carousel>
             </div>
