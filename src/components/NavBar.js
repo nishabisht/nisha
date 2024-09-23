@@ -11,6 +11,20 @@ import Sicon3 from "../assets/img/nav-icon3.svg";
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href =
+      theme === "dark" ? "/path/to/dark-theme.css" : "/path/to/light-theme.css";
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, [theme]);
 
   const onUndateActiveLink = (item) => {
     setActiveLink(item);
@@ -30,8 +44,14 @@ function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    //remove all color classes from navbar
+
+    <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} `}>
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} className="border bg-white rounded-circle" />
@@ -85,6 +105,9 @@ function NavBar() {
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
               <span>Let's Connect</span>
+            </button>
+            <button onClick={toggleTheme} className="btn btn-outline-light">
+              {theme === "dark" ? "Light Theme" : "Dark Theme"}
             </button>
           </span>
         </Navbar.Collapse>

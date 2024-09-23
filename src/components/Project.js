@@ -15,27 +15,27 @@ export default function Project() {
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "React.dev Clone",
       describtion: "Design & development",
       imgUrl: projImg2,
     },
     {
-      title: "Web Designer",
+      title: "Ecommerce Website",
       describtion: "Design & development",
       imgUrl: projImg3,
     },
     {
-      title: "Business Startup",
+      title: "Ecom Pet Store",
       describtion: "Design & development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "To Do App",
       describtion: "Design & development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "E-Learning Website",
       describtion: "Design & development",
       imgUrl: projImg3,
     },
@@ -54,13 +54,13 @@ export default function Project() {
             <Tab.Container id="projects-tab" defaultActiveKey="first">
               <Nav variant="pills" defaultActiveKey="first">
                 <Nav.Item>
-                  <Nav.Link eventKey="first">Tab One</Nav.Link>
+                  <Nav.Link eventKey="first">Springboot/React</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                  <Nav.Link eventKey="second">React</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Tab Three</Nav.Link>
+                  <Nav.Link eventKey="third">Bootstrap</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
@@ -73,26 +73,16 @@ export default function Project() {
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
                   <Row>
-                    <Col>
-                      <div className="alignment">
-                        A portfolio's meaning can be defined as a collection of
-                        financial assets and<br></br> investment tools that are
-                        held by an individual, a financial institution or an
-                        investment firm.
-                      </div>
-                    </Col>
+                    {projects.map((project, index) => (
+                      <ProjectCard key={index} {...project} />
+                    ))}
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <Row>
-                    <Col>
-                      <div className="alignment">
-                        A portfolio's meaning can be defined as a collection of
-                        financial assets and<br></br> investment tools that are
-                        held by an individual, a financial institution or an
-                        investment firm.
-                      </div>
-                    </Col>
+                    {projects.map((project, index) => (
+                      <ProjectCard key={index} {...project} />
+                    ))}
                   </Row>
                 </Tab.Pane>
               </Tab.Content>

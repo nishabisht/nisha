@@ -45,7 +45,7 @@ export default function Banner() {
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
-      setLoopNum(loopNum + 1);
+      setLoopNum((prevLoopNum) => prevLoopNum + 1);
       setDelta(600);
     }
   };
