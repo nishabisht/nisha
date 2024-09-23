@@ -1,0 +1,91 @@
+/* dark-theme.css */
+
+.testimonial-card {
+  background-image: url(./assets/img/yellownote.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  width: 10vw;
+  height: 26vh;
+}
+
+/* darkTheme.css */
+.testimonial-card {
+  margin: 5px;
+  padding: 2px;
+}
+
+.test-card {
+  margin: 5px 0;
+  padding: 3px 0;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+}
+
+.testimonial-author {
+  font-size: 0.875rem;
+}
+
+/* Responsive styles */
+@media (min-width: 576px) {
+  .testimonial-card {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .test-card {
+    margin: 10px 0;
+    padding: 5px 0;
+  }
+
+  .testimonial-text {
+    font-size: 1.25rem;
+  }
+
+  .testimonial-author {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .test-card {
+    margin: 15px 0;
+    padding: 10px 0;
+  }
+
+  .testimonial-text {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-author {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-card {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .test-card {
+    margin: 20px 0;
+    padding: 15px 0;
+  }
+
+  .testimonial-text {
+    font-size: 1.75rem;
+  }
+
+  .testimonial-author {
+    font-size: 1.25rem;
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "homepage": "https://nishabisht.github.io/nisha-portfolio",
-  "name": "personal-portfolio",
+  "homepage": "https://nishabisht.github.io/nisha",
+  "name": "nisha-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
