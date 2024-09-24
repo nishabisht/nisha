@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "../darkTheme.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -29,10 +30,10 @@ export default function Skill() {
   };
   return (
     <section className="skill" id="skill">
-      <Container>
-        <Row>
-          <Col>
-            <div className="skill-bx">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
               <h2>skills</h2>
               <p>
                 In this tutorial, we build a personal portfolio website using
@@ -62,10 +63,10 @@ export default function Skill() {
                 </div>
               </Carousel>
             </div>
-          </Col>
-        </Row>
-      </Container>
-      <img className="background-image-left" src={colorSharp} />
+          </div>
+        </div>
+      </div>
+      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 }

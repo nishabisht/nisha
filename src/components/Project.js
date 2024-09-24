@@ -1,11 +1,13 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import TrackVisibility from "react-on-screen";
 import "../App.css";
+import "../darkTheme.css";
 
 const Project = () => {
   const spring_react = [
@@ -110,55 +112,69 @@ const Project = () => {
     <section className="project" id="project">
       <Container>
         <Row>
-          <Col>
-            <h2>Projects</h2>
-            <p>
-              Welcome to my project portfolio! Here, you'll find a collection of
-              projects that showcase my skills and experience in web
-              development. Each project highlights different aspects of my
-              expertise, from front-end development with React to full-stack
-              applications using Spring Boot.
-            </p>
-            <Tab.Container id="projects-tab" defaultActiveKey="first">
-              <Nav variant="pills" defaultActiveKey="first">
-                <Nav.Item>
-                  <Nav.Link eventKey="first">React</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second">Springboot/React</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third">Bootstrap</Nav.Link>
-                </Nav.Item>
-              </Nav>
-              <Tab.Content>
-                <Tab.Pane eventKey="second">
-                  <Row>
-                    {spring_react.map((spring_react, index) => (
-                      <ProjectCard key={index} {...spring_react} />
-                    ))}
-                  </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="first">
-                  <Row>
-                    {react.map((react, index) => (
-                      <ProjectCard key={index} {...react} />
-                    ))}
-                  </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="third">
-                  <Row>
-                    {bootstrap.map((bootstrap, index) => (
-                      <ProjectCard key={index} {...bootstrap} />
-                    ))}
-                  </Row>
-                </Tab.Pane>
-              </Tab.Content>
-            </Tab.Container>
+          <Col size={12}>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <h2>Projects</h2>
+                  <p>
+                    Welcome to my project portfolio! Here, you'll find a
+                    collection of projects that showcase my skills and
+                    experience in web development. Each project highlights
+                    different aspects of my expertise, from front-end
+                    development with React to full-stack applications using
+                    Spring Boot.
+                  </p>
+                  <Tab.Container
+                    id="projects-tab my-2"
+                    defaultActiveKey="first"
+                  >
+                    <Nav variant="pills" defaultActiveKey="first">
+                      <Nav.Item>
+                        <Nav.Link eventKey="first">React</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="second">Springboot/React</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third">Bootstrap</Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+                    <Tab.Content>
+                      <Tab.Pane eventKey="second">
+                        <Row>
+                          {spring_react.map((spring_react, index) => (
+                            <ProjectCard key={index} {...spring_react} />
+                          ))}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="first">
+                        <Row>
+                          {react.map((react, index) => (
+                            <ProjectCard key={index} {...react} />
+                          ))}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="third">
+                        <Row>
+                          {bootstrap.map((bootstrap, index) => (
+                            <ProjectCard key={index} {...bootstrap} />
+                          ))}
+                        </Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="backgoud" src={colorSharp2} />
+      {/* <img className="background-image-right" src={colorSharp2}></img> */}
     </section>
   );
 };

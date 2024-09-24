@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
+// import "../darkTheme.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -17,8 +18,7 @@ function NavBar() {
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.type = "text/css";
-    link.href =
-      theme === "dark" ? "/path/to/dark-theme.css" : "/path/to/light-theme.css";
+    link.href = theme === "dark" ? "../darkTheme.css" : "../lightTheme.css";
     document.head.appendChild(link);
 
     return () => {
@@ -26,7 +26,7 @@ function NavBar() {
     };
   }, [theme]);
 
-  const onUndateActiveLink = (item) => {
+  const onUpdateActiveLink = (item) => {
     setActiveLink(item);
   };
 
@@ -49,16 +49,13 @@ function NavBar() {
   };
 
   return (
-    //remove all color classes from navbar
-
     <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} `}>
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} className="border bg-white rounded-circle" />
-          <span className="h4 text-white p-2">Nisha Bisht</span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav ms-3">
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
@@ -68,7 +65,7 @@ function NavBar() {
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUndateActiveLink("home")}
+              onClick={() => onUpdateActiveLink("home")}
             >
               Home
             </Nav.Link>
@@ -77,7 +74,7 @@ function NavBar() {
               className={
                 activeLink === "skill" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUndateActiveLink("skill")}
+              onClick={() => onUpdateActiveLink("skill")}
             >
               Skill
             </Nav.Link>
@@ -86,24 +83,46 @@ function NavBar() {
               className={
                 activeLink === "project" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUndateActiveLink("project")}
+              onClick={() => onUpdateActiveLink("project")}
             >
               Project
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/nisha-bisht/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={Sicon1} alt="" />
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/nishabisht"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={Sicon2} alt="" />
               </a>
-              <a href="#">
+              <a
+                href="https://www.instagram.com/aishabisht2000/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={Sicon3} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
+            <button
+              className={
+                "vvd" + activeLink === "connect"
+                  ? "active navbar-link"
+                  : "navbar-link"
+              }
+              onClick={() => {
+                onUpdateActiveLink("connect");
+                window.location.href = "#connect";
+              }}
+            >
               <span>Let's Connect</span>
             </button>
             <button onClick={toggleTheme} className="btn btn-outline-light">

@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
+import "../darkTheme.css";
 
 export default function Banner() {
   const [toRotate, setToRotate] = useState([

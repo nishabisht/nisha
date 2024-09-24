@@ -31,8 +31,6 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
-  color: #fff !important;
   font-family: "Centra", sans-serif !important;
 }
 
@@ -69,7 +67,6 @@ img {
 
 button {
   border: 0;
-  background-color: transparent;
 }
 
 input:focus,
@@ -85,55 +82,33 @@ select:focus {
   }
 }
 
-@media (min-width: 992px) {
-  .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-    justify-content: flex-end;
-  }
-}
-
-p.success {
-  color: green;
-}
-
-p.danger {
-  color: red;
-}
-
-/* navbar css */
-
-.navbar-light .navbar-nav .nav-link {
-  color: rgb(250 235 235 / 97%);
-}
-
-.navbar-light .navbar-nav .nav-link {
-  color: rgb(233 214 214 / 50%) !important;
-  margin: 10px;
-}
-
+/************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition: 0.32 ease-in-out;
+  transition: 0.32s ease-in-out;
 }
-
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
 }
 nav.navbar a.navbar-brand {
   width: 9%;
 }
-
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
 }
-span.navbar-test {
+span.navbar-text {
   display: flex;
   align-items: center;
 }
@@ -144,7 +119,6 @@ span.navbar-test {
 .social-icon a {
   width: 42px;
   height: 42px;
-  background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
   margin-right: 6px;
@@ -158,7 +132,6 @@ span.navbar-test {
   width: 42px;
   height: 42px;
   position: absolute;
-  background-color: #ffffff;
   border-radius: 50%;
   transform: scale(0);
   transition: 0.3s ease-in-out;
@@ -173,17 +146,14 @@ span.navbar-test {
 }
 .social-icon a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
-    hue-rotate(346deg) brightness(0);
+    hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
   position: relative;
-  background-color: transparent;
   transition: 0.3s ease-in-out;
 }
 .navbar-text button span {
@@ -194,15 +164,12 @@ span.navbar-test {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
-.navbar-text button:hover {
-  color: #121212;
-}
+
 .navbar-text button:hover::before {
   content: "";
   width: 100%;
@@ -217,21 +184,16 @@ nav.navbar .navbar-toggler:focus {
 nav.navbar .navbar-toggler-icon {
   width: 24px;
   height: 17px;
-  background-image: none;
   position: relative;
-  border-bottom: 2px solid #fff;
   transition: all 300ms linear;
   top: -2px;
 }
-nav.navbar .navbar-toggler-icon:focus {
-  border-bottom: 2px solid #fff;
-}
+
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
   width: 24px;
   position: absolute;
   height: 2px;
-  background-color: #fff;
   top: 0;
   left: 0;
   content: "";
@@ -243,43 +205,29 @@ nav.navbar .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transform: rotate(45deg);
-  background-color: #fff;
   height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   transform: translateY(8px) rotate(-45deg);
-  background-color: #fff;
   height: 2px;
-}
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  border-color: transparent;
 }
 
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url("./assets/img/banner-bg.png");
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(
-    90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
-    rgba(74, 47, 189, 0.5) 111.58%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
 }
 .banner h1 {
-  font-size: 60px;
+  font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -287,17 +235,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #b8b8b8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
 }
-.gray {
-  color: rgb(161, 158, 158);
-}
 .banner button {
-  color: #ffffff;
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
@@ -338,7 +281,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-bx {
-  background: #151515;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
@@ -349,7 +291,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
 }
 .skill p {
-  color: #b8b8b8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -364,19 +305,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 50%;
   margin: 0 auto 15px auto;
 }
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
 
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
 }
 .project h2 {
   font-size: 45px;
@@ -384,7 +317,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
 }
 .project p {
-  color: #b8b8b8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -396,17 +328,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
-  overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
-  background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -421,39 +349,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   width: 0;
   height: 100%;
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   top: 0;
   left: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
 }
-.project .nav.nav-pills .nav-link.active {
-  border: 1px solid rgba(255, 255, 255, 1);
-}
-#navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-a#projects-tab-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
-}
-a#projects-tab-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-a#projects-tab-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
-}
-.tab-content {
-  margin-top: 20px;
-}
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
@@ -462,7 +364,6 @@ a#projects-tab-tab-third {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -498,21 +399,108 @@ a#projects-tab-tab-third {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
+
+/************ Testimonial Css ************/
+
+.sticky-note {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  transform: rotate(-3deg);
+  position: relative;
+  margin: 20px;
+  background-blend-mode: multiply;
 }
-.alignment {
-  text-align: center;
+.sticky-note::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.sticky-note::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (min-width: 576px) {
+  .testimonial-card {
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .test-card {
+    margin: 10px 0;
+    padding: 17px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .test-card {
+    margin: 15px 0;
+    padding: 10px 17px;
+  }
+
+  .testimonial-text {
+    font-size: 1.25rem;
+  }
+
+  .testimonial-author {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-card {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .test-card {
+    margin: 18px 0;
+    padding: 2px 17px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 1rem;
+  }
 }
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -526,10 +514,7 @@ a#projects-tab-tab-third {
 .contact form input,
 .contact form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  color: #fff;
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
@@ -537,26 +522,15 @@ a#projects-tab-tab-third {
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
-.contact form input:focus,
-.contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: #121212;
-}
+
 .contact form input::placeholder,
 .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
 }
-.contact form input:focus::placeholder,
-.contact form textarea:focus::placeholder {
-  color: #121212;
-  opacity: 0.8;
-}
+
 .contact form button {
   font-weight: 700;
-  color: #000;
-  background-color: #fff;
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
@@ -568,12 +542,9 @@ a#projects-tab-tab-third {
   z-index: 1;
   position: relative;
 }
-.contact form button:hover {
-  color: #fff;
-}
+
 .contact form button::before {
   content: "";
-  background: #121212;
   width: 0;
   height: 100%;
   position: absolute;
@@ -589,15 +560,9 @@ a#projects-tab-tab-third {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url("./assets/img/footer-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .newsletter-bx {
-  background: #ffffff;
   border-radius: 55px;
-  color: #121212;
   padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
@@ -608,7 +573,6 @@ a#projects-tab-tab-third {
   line-height: 1.2em;
 }
 .new-email-bx {
-  background: #fff;
   padding: 5px;
   border-radius: 20px;
   position: relative;
@@ -618,7 +582,6 @@ a#projects-tab-tab-third {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -629,7 +592,6 @@ a#projects-tab-tab-third {
 }
 .new-email-bx::after {
   content: "";
-  background: #fff;
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -640,16 +602,12 @@ a#projects-tab-tab-third {
 }
 .new-email-bx input {
   width: 100%;
-  color: #121212;
   font-weight: 500;
-  background: transparent;
   border: 0;
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 20px 65px;
-  color: #fff;
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 18px;
@@ -660,7 +618,6 @@ a#projects-tab-tab-third {
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #b8b8b8;
   letter-spacing: 0.5px;
   margin-top: 20px;
 }

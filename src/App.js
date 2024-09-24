@@ -5,7 +5,8 @@ import Banner from "./components/Banner";
 import Skill from "./components/Skill";
 import Project from "./components/Project";
 import Testimonial from "./components/Testimonial";
-import ContactUs from "./components/ContactUs";
+import { Footer } from "./components/Footer";
+import { Contact } from "./components/ContactUs";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Skill />
       <Project />
       <Testimonial />
-      <ContactUs />
+      <Contact />
+      <Footer />
     </div>
   );
 }
