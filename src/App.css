@@ -439,6 +439,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 /* Responsive styles */
+@media (min-width: 300px) {
+  .testimonial-card {
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .test-card {
+    margin: 10px 10px;
+    padding: 10px 17px;
+  }
+
+  .testimonial-text {
+    font-size: 0.75rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.25rem;
+  }
+}
+
 @media (min-width: 576px) {
   .testimonial-card {
     margin: 15px;
@@ -446,16 +466,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   }
 
   .test-card {
-    margin: 10px 0;
-    padding: 17px;
+    margin: 10px 10px;
+    padding: 10px 17px;
   }
 
   .testimonial-text {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 
   .testimonial-author {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -466,16 +486,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   }
 
   .test-card {
-    margin: 15px 0;
+    margin: 15px 10px;
     padding: 10px 17px;
   }
 
   .testimonial-text {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
   }
 
   .testimonial-author {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 
@@ -486,16 +506,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   }
 
   .test-card {
-    margin: 18px 0;
+    margin: 18px 10px;
     padding: 2px 17px;
   }
 
   .testimonial-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .testimonial-author {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
