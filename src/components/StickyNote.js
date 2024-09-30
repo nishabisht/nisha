@@ -1,5 +1,5 @@
 import React from "react";
-import "../darkTheme.css";
+// import "../assets/css/darkTheme.css";
 
 const StickyNote = ({ testimonial, author, backgroundImage }) => {
   const cardStyle = {

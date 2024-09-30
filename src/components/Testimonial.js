@@ -6,7 +6,7 @@ import greenNote from "../assets/img/greenNote.png";
 import pinkNote from "../assets/img/pinkNote.png";
 import blueNote from "../assets/img/blueNote.png";
 import StickyNote from "./StickyNote";
-import "../darkTheme.css";
+// import "../assets/css/darkTheme.css";
 
 const Testimonial = () => {
   const testimonials = [
@@ -33,17 +33,23 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="testimonial" id="testimonial">
+    <section className="testimonials" id="testimonial">
       <Container>
-        <Row className="my-5 py-2">
+        <Row className="my-2 py-2">
           <Col className="text-center">
-            <h2>Testimonials</h2>
+            <h2 className="testimonial">Testimonials</h2>
             <p>Here are some kind words from our satisfied clients:</p>
           </Col>
         </Row>
-        <Row className="my-2 py-2">
+        <Row className="my-2 py-2 ">
           {testimonials.map((testimonial, index) => (
-            <Col key={index} xs={12} md={6} lg={3} className="mb-4">
+            <Col
+              key={index}
+              xs={12}
+              md={6}
+              lg={3}
+              className="mb-4 text-center d-flex justify-content-center"
+            >
               <StickyNote
                 testimonial={testimonial.text}
                 author={testimonial.author}

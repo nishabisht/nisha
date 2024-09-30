@@ -3,19 +3,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
-import "../darkTheme.css";
+// import "../assets/css/darkTheme.css";
 
 export default function Banner() {
   const [toRotate, setToRotate] = useState([
     "Software Engineer",
-    "Application Support Engineer",
-    "Full Stack Developer",
+    "FullStack Developer",
+    "Support Engineer",
   ]);
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
+  const period = 500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -47,7 +47,7 @@ export default function Banner() {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum((prevLoopNum) => prevLoopNum + 1);
-      setDelta(600);
+      setDelta(1000);
     }
   };
 
@@ -57,8 +57,8 @@ export default function Banner() {
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={6}>
             <span className="tagline">Welcome to my Portfolio</span>
+            <h1>{"Hi! I'm Nisha Bisht"}</h1>
             <h1>
-              {"Hi! I'm Nisha "}
               <span className="wrap">{text}</span>
             </h1>
             <span className="gray">
@@ -69,7 +69,12 @@ export default function Banner() {
               solutions through technical expertise and innovative
               problem-solving
             </span>
-            <button onClick={() => console.log("lets connect")}>
+            <button
+              className="contact-btn"
+              onClick={() => {
+                window.location.href = "#connect";
+              }}
+            >
               Let's Connect <ArrowRightCircle size={25}></ArrowRightCircle>
             </button>
           </Col>

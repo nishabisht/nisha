@@ -1,13 +1,16 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
+import portfolio from "../assets/img/portfolio.jpg";
+import react_clone from "../assets/img/react_clone.jpg";
+import custom_card from "../assets/img/custom_card.jpg";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import TrackVisibility from "react-on-screen";
+
 import "../App.css";
-import "../darkTheme.css";
+// import "../assets/css/darkTheme.css";
 
 const Project = () => {
   const spring_react = [
@@ -16,6 +19,7 @@ const Project = () => {
       description:
         "The Daily Aid App is a Spring Boot application designed to manage daily amenities services, with user authentication and role-based access controls (e.g., user, admin).",
       imgUrl: projImg1,
+      link: "https://github.com/nishabisht/daily-aid-springboot",
     },
     {
       title: "Ecom Pet Store",
@@ -41,13 +45,13 @@ const Project = () => {
       title: "Portfolio",
       description:
         "A personal portfolio website showcasing projects and skills.",
-      imgUrl: projImg1,
+      imgUrl: portfolio,
     },
     {
       title: "React.dev Clone",
       description:
         "A clone of the React.dev website, demonstrating React skills.",
-      imgUrl: projImg2,
+      imgUrl: react_clone,
     },
     {
       title: "Ecommerce Website",
@@ -101,10 +105,10 @@ const Project = () => {
       imgUrl: projImg2,
     },
     {
-      title: "E-Learning Website",
+      title: "Custom Card Website",
       description:
         "An online platform for educational content and courses, built with Bootstrap.",
-      imgUrl: projImg3,
+      imgUrl: custom_card,
     },
   ];
 

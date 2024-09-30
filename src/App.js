@@ -7,18 +7,21 @@ import Project from "./components/Project";
 import Testimonial from "./components/Testimonial";
 import { Footer } from "./components/Footer";
 import { Contact } from "./components/ContactUs";
+import { ThemeProvider } from "./components/ThemeContext";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Banner />
-      <Skill />
-      <Project />
-      <Testimonial />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <NavBar />
+        <Banner />
+        <Skill />
+        <Project />
+        <Testimonial />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -1,13 +1,15 @@
 import React from "react";
 import "../App.css";
-import "../darkTheme.css";
+// import "../assets/css/darkTheme.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import colorSharp from "../assets/img/color-sharp.png";
+import Springboot from "../assets/img/springboot.png";
+import react from "../assets/img/react.png";
+import java from "../assets/img/java.png";
+import bootstrap from "../assets/img/bootstrap.png";
+import github from "../assets/img/github.png";
+import javascript from "../assets/img/javascript.png";
 
 export default function Skill() {
   const responsive = {
@@ -30,15 +32,15 @@ export default function Skill() {
   };
   return (
     <section className="skill" id="skill">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
+      <Container>
+        <Row>
+          <Col>
             <div className="skill-bx wow zoomIn">
-              <h2>skills</h2>
+              <h2>Skills</h2>
               <p>
-                In this tutorial, we build a personal portfolio website using
-                React and Animate CSS.<br></br> Follow along and share what you
-                build in the comments!
+                A showcase of my expertise, from front-end development with
+                React and CSS to back-end work with Java and Spring Boot.
+                Explore and share your thoughts!
               </p>
               <Carousel
                 responsive={responsive}
@@ -46,27 +48,46 @@ export default function Skill() {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="image" />
+                  <img
+                    src={java}
+                    alt="Core/Advance Java"
+                    className="skill-img"
+                  />
                   <h5>Core/Advance Java</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="image" />
+                  <img src={github} alt="GitHub" className="skill-img" />
+                  <h5>GitHub</h5>
+                </div>
+                <div className="item">
+                  <img
+                    src={javascript}
+                    alt="JavaScript"
+                    className="skill-img"
+                  />
                   <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="image" />
-                  <h5>Springboot</h5>
+                  <img src={react} alt="React" className="skill-img" />
+                  <h5>React</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="image" />
-                  <h5>React</h5>
+                  <img src={bootstrap} alt="Node.js" className="skill-img" />
+                  <h5>Bootstrap</h5>
+                </div>
+                <div className="item">
+                  <img
+                    src={Springboot}
+                    alt="Spring Boot"
+                    className="skill-img"
+                  />
+                  <h5>Spring Boot</h5>
                 </div>
               </Carousel>
             </div>
-          </div>
-        </div>
-      </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 }

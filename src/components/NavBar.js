@@ -1,30 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../App.css";
-// import "../darkTheme.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../img/profile.png";
+import logo from "../assets/img/logo.png";
 import Sicon1 from "../assets/img/nav-icon1.svg";
 import Sicon2 from "../assets/img/nav-icon2.svg";
 import Sicon3 from "../assets/img/nav-icon3.svg";
+import { ThemeContext } from "../components/ThemeContext";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    link.href = theme === "dark" ? "../darkTheme.css" : "../lightTheme.css";
-    document.head.appendChild(link);
-
-    return () => {
-      document.head.removeChild(link);
-    };
-  }, [theme]);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   const onUpdateActiveLink = (item) => {
     setActiveLink(item);
@@ -45,14 +33,14 @@ function NavBar() {
   }, []);
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   return (
     <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} `}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} className="border bg-white rounded-circle" />
+          <img src={logo} className="logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav ms-3">

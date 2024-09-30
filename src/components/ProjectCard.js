@@ -1,14 +1,16 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import "../App.css";
-import "../darkTheme.css";
+// import "../assets/css/darkTheme.css";
 
-export default function ProjectCard({ title, description, imgUrl }) {
+export default function ProjectCard({ title, description, imgUrl, link }) {
   return (
-    <Col sm={6} md={4}>
+    <Col sm={12} md={6} lg={4} className="mt-3 d-flex justify-content-center">
       <div className="proj-imgbx">
-        <img src={imgUrl} alt={title} />
-        <div className="proj-txtx">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img src={imgUrl} alt={title} className="project-img rounded" />
+        </a>
+        <div className="proj-txtx text-center">
           <h1>{title}</h1>
           <span>{description}</span>
         </div>

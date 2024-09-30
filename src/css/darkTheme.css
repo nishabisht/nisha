@@ -1,0 +1,222 @@
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+.dark-theme body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar Styles */
+.dark-theme nav.navbar .navbar-nav .nav-link.navbar-link {
+  color: #fff !important;
+}
+
+.dark-theme nav.navbar.scrolled {
+  background-color: #121212;
+}
+
+.dark-theme .navbar-text button {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.dark-theme .navbar-text button:hover {
+  color: #121212;
+  background-color: white;
+}
+
+/* Adjust the navbar-toggler styles */
+.dark-theme nav.navbar .navbar-toggler-icon {
+  background-image: none;
+  border-bottom: 2px solid #fff;
+}
+
+.dark-theme nav.navbar .navbar-toggler-icon::before,
+.dark-theme nav.navbar .navbar-toggler-icon::after {
+  background-color: #fff;
+}
+
+.dark-theme
+  nav.navbar
+  .navbar-toggler[aria-expanded="true"]
+  .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+/* Banner Section */
+.dark-theme .banner {
+  background-image: url("../assets/img/banner-bg.png");
+  background-color: rgba(0, 0, 0, 0.5); /* Added subtle background color */
+}
+
+.dark-theme .banner .tagline {
+  background: linear-gradient(90.21deg, #aa367c4d -5.91%, #4a2fbd4d 111.58%);
+  border: 1px solid #ffffff4d;
+}
+
+.dark-theme .banner p {
+  color: #ffffff;
+}
+
+.dark-theme .banner button {
+  color: #fff;
+  background: black;
+}
+
+/* Skill Section */
+.dark-theme .skill {
+  background-color: rgba(0, 0, 0, 0.8); /* Reduced opacity */
+}
+
+.dark-theme .skill-bx {
+  background: linear-gradient(
+    127deg,
+    rgba(74, 40, 65, 0.8) 8%,
+    rgba(7, 2, 13, 0.8) 39%,
+    rgba(6, 1, 13, 0.8) 58%,
+    rgba(51, 40, 84, 0.8) 88%
+  );
+}
+
+.dark-theme .skill p {
+  color: #ffffff;
+}
+
+/* Projects Section */
+.dark-theme .project {
+  background-image: url("../assets/img/color-sharp.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5); /* Added a subtle background color */
+}
+
+.dark-theme .project p {
+  color: #ffffff;
+}
+
+.dark-theme .project .nav.nav-pills {
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.dark-theme .project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  color: #fff;
+}
+
+.dark-theme .project .nav.nav-pills .nav-link::before {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.dark-theme .project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.dark-theme .nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.dark-theme .nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.dark-theme .nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+.dark-theme .proj-imgbx::before {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+}
+.dark-theme .background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+
+/************ Projects Css ************/
+.dark-theme .contact {
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
+}
+.dark-theme .contact form input,
+.contact form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+.dark-theme .contact form input:focus,
+.contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+.dark-theme .contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #fff;
+}
+.dark-theme .contact form input:focus::placeholder,
+.contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+.dark-theme .contact form button {
+  background-color: #fff;
+  color: #000;
+}
+.dark-theme .contact form button:hover {
+  color: #fff;
+}
+.dark-theme .contact form button::before {
+  background: #121212;
+}
+
+/************ Footer Css ************/
+.dark-theme .footer {
+  background-image: url("../assets/img/footer-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5); /* Added a subtle background color */
+}
+
+.dark-theme .newsletter-bx {
+  background: #ffffff;
+  color: #121212;
+}
+
+.dark-theme .new-email-bx {
+  background: #fff;
+}
+
+.dark-theme .new-email-bx::before {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+}
+.dark-theme .new-email-bx::after {
+  background: #fff;
+}
+.dark-theme .new-email-bx input {
+  background: transparent;
+  color: #121212;
+}
+.dark-theme .new-email-bx button {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  color: #fff;
+}
+.dark-theme .footer p {
+  color: #b8b8b8;
+}
+
+/************ Testimonial Css ************/
+.dark-theme .sticky-note {
+  color: #333;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}

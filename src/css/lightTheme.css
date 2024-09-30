@@ -1,0 +1,278 @@
+.light-theme {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+.light-theme body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar Styles */
+.light-theme nav.navbar .navbar-nav .nav-link.navbar-link {
+  color: #000000 !important;
+}
+
+.light-theme nav.navbar.scrolled {
+  background-color: #ffffff;
+}
+
+.light-theme .navbar-text button {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+
+.light-theme .navbar-text button:hover {
+  color: #ffffff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+}
+
+/* Adjust the navbar-toggler styles */
+.light-theme nav.navbar .navbar-toggler-icon {
+  background-image: none;
+  border-bottom: 2px solid #000000;
+}
+
+.light-theme nav.navbar .navbar-toggler-icon::before,
+.light-theme nav.navbar .navbar-toggler-icon::after {
+  background-color: #000000;
+}
+
+.light-theme
+  nav.navbar
+  .navbar-toggler[aria-expanded="true"]
+  .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+/* Banner Section */
+.light-theme .banner {
+  background-image: url("../assets/img/banner-bg-light.png");
+  background-color: #ffffff; /* Added subtle background color */
+}
+
+.banner .tagline {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(118deg, rgb(124, 143, 211) 7%, #9f90e4 89%);
+  color: #ffffff;
+  border: 2px solid #694af3;
+}
+
+.light-theme .banner p {
+  color: #ffffff;
+}
+
+.light-theme .banner button {
+  color: #000000;
+}
+
+/* Skill Section */
+.light-theme .skill {
+  background-color: #f8f6ff;
+}
+
+.light-theme .skill h2 {
+  color: #ffffff; /* Reduced opacity */
+}
+
+.light-theme .skill-bx {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+  box-shadow: 5px 10px 18px #c1c2c9;
+}
+
+.light-theme .skill p {
+  color: #ffffff;
+}
+
+.light-theme .item h5 {
+  color: #ffffff;
+}
+
+/* Projects Section */
+.light-theme .project {
+  background-image: url("../assets/img/project-light.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffffff; /* Added a subtle background color */
+}
+
+.light-theme .project p {
+  color: #000000;
+}
+
+.light-theme .project .nav.nav-pills {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.light-theme .project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  color: #000000;
+}
+
+.light-theme .project .nav.nav-pills .nav-link::before {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.light-theme .project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.light-theme .nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.light-theme .nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.light-theme .nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+.light-theme .proj-imgbx::before {
+  background: rgb(150, 132, 232);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+}
+.light-theme .proj-imgbx {
+  color: #ffffff;
+}
+.light-theme .background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+/************ Contact Css ************/
+.light-theme .contact h2 {
+  color: #ffffff;
+}
+.light-theme .contact-btn {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+  color: #ffffff !important;
+  padding: 5%;
+}
+
+/************ Projects Css ************/
+.light-theme .contact {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+}
+.light-theme .contact form input,
+.contact form textarea {
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #000000;
+}
+.light-theme .contact form input:focus,
+.contact form textarea:focus {
+  background: #ffffff;
+  color: #121212;
+}
+.light-theme .contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #000000;
+}
+.light-theme .contact form input:focus::placeholder,
+.contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+.light-theme .contact form button {
+  background-color: #ffffff;
+  color: #000;
+}
+.light-theme .contact form button:hover {
+  color: #000000;
+}
+.light-theme .contact form button::before {
+  background: #ffffff;
+}
+
+/************ Footer Css ************/
+.light-theme .footer {
+  background-image: url("../assets/img/footer-bg-light.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: ffffff; /* Added a subtle background color */
+}
+
+.light-theme .newsletter-bx {
+  background: #ffffff;
+  color: #121212;
+  box-shadow: 5px 10px 18px #c1c2c9;
+}
+
+.light-theme .new-email-bx {
+  background: #ffffff;
+}
+
+.light-theme .new-email-bx::before {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+}
+.light-theme .new-email-bx::after {
+  background: #ffffff;
+}
+.light-theme .new-email-bx input {
+  background: transparent;
+  color: #121212;
+}
+.light-theme .new-email-bx button {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+  color: #ffffff;
+}
+.light-theme .footer p {
+  color: #000000;
+}
+
+/************ Testimonial Css ************/
+.light-theme .sticky-note {
+  color: #333;
+}
+
+.light-theme .testimonials {
+  background-color: #f8f6ff;
+}
