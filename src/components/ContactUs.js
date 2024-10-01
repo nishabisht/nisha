@@ -72,7 +72,7 @@ export const Contact = () => {
                   }
                 >
                   <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit}>
+                  <form className="d-flex" onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -127,7 +127,7 @@ export const Contact = () => {
                           }
                           required
                         ></textarea>
-                        <button type="submit">
+                        <button className="align-items-center" type="submit">
                           <span>{buttonText}</span>
                         </button>
                       </Col>

@@ -4,7 +4,7 @@ import "../App.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Springboot from "../assets/img/springboot.png";
+import Springboot from "../assets/img/springboot.svg";
 import react from "../assets/img/react.png";
 import java from "../assets/img/java.png";
 import bootstrap from "../assets/img/bootstrap.png";

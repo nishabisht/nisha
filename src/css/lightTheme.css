@@ -17,13 +17,14 @@
   background-color: #ffffff;
 }
 
-.light-theme .navbar-text button {
+.light-theme .navbar-text button:hover {
   color: #000000;
-  background-color: transparent;
-  border: 1px solid #000000;
+  background: rgb(255, 255, 255);
+  border: 2px solid #000000;
 }
 
-.light-theme .navbar-text button:hover {
+.light-theme .navbar-text button {
+  border: 2px solid rgb(38 106 254);
   color: #ffffff;
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -51,6 +52,26 @@
   border-color: transparent;
 }
 
+.light-theme .social-icon a {
+  border: 2px solid rgb(38 106 254);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+}
+
+.light-theme .social-icon a:hover {
+  border: 2px solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  color: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+}
+
 /* Banner Section */
 .light-theme .banner {
   background-image: url("../assets/img/banner-bg-light.png");
@@ -74,7 +95,7 @@
 
 /* Skill Section */
 .light-theme .skill {
-  background-color: #f8f6ff;
+  background-color: #ede8ff;
 }
 
 .light-theme .skill h2 {
@@ -88,7 +109,7 @@
     rgba(76, 106, 216, 1) 7%,
     rgba(150, 132, 232, 1) 89%
   );
-  box-shadow: 5px 10px 18px #c1c2c9;
+  box-shadow: 5px 10px 18px #c4c8e9;
 }
 
 .light-theme .skill p {
@@ -115,6 +136,7 @@
 .light-theme .project .nav.nav-pills {
   background-color: #ffffff;
   overflow: hidden;
+  box-shadow: 5px 10px 18px #c4c8e9;
 }
 .light-theme .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -132,7 +154,8 @@
   transition: 0.3s ease-in-out;
 }
 .light-theme .project .nav.nav-pills .nav-link.active {
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(38 106 254);
+  color: #ffffff;
 }
 
 .light-theme .nav-link#projects-tabs-tab-first {
@@ -233,7 +256,7 @@
 .light-theme .newsletter-bx {
   background: #ffffff;
   color: #121212;
-  box-shadow: 5px 10px 18px #c1c2c9;
+  box-shadow: 5px 10px 18px #c4c8e9;
 }
 
 .light-theme .new-email-bx {
@@ -274,5 +297,5 @@
 }
 
 .light-theme .testimonials {
-  background-color: #f8f6ff;
+  background-color: #ede8ff;
 }

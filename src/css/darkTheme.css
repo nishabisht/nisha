@@ -46,6 +46,14 @@
   border-color: transparent;
 }
 
+.dark-theme .social-icon a {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .social-icon a:hover {
+  border: 2px solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
 /* Banner Section */
 .dark-theme .banner {
   background-image: url("../assets/img/banner-bg.png");

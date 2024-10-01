@@ -102,7 +102,7 @@ function NavBar() {
             </div>
             <button
               className={
-                "vvd" + activeLink === "connect"
+                "vvd rounded" + activeLink === "connect"
                   ? "active navbar-link"
                   : "navbar-link"
               }
