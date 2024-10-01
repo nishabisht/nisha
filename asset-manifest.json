@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/nisha/static/css/main.07776f7d.css",
-    "main.js": "/nisha/static/js/main.1843bc9d.js",
+    "main.css": "/nisha/static/css/main.f2276cfa.css",
+    "main.js": "/nisha/static/js/main.e55ee693.js",
     "static/js/592.2b57b2b8.chunk.js": "/nisha/static/js/592.2b57b2b8.chunk.js",
     "static/media/color-sharp.png": "/nisha/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/header-img.svg": "/nisha/static/media/header-img.582fda3be0215b14061c5055d2ef985c.svg",
     "static/media/footer-bg-light.png": "/nisha/static/media/footer-bg-light.e1b4e2df69d966bf0b9a.png",
     "static/media/banner-bg-light.png": "/nisha/static/media/banner-bg-light.d518c9cdba0a1983d8c0.png",
     "static/media/banner-bg.png": "/nisha/static/media/banner-bg.cc1273af450504afe755.png",
-    "static/media/springboot.png": "/nisha/static/media/springboot.1a753d3a09a8df3cec6c.png",
     "static/media/portfolio.jpg": "/nisha/static/media/portfolio.4311ca24fbaa500ab877.jpg",
     "static/media/react_clone.jpg": "/nisha/static/media/react_clone.adc9d40aa7f53669b80e.jpg",
     "static/media/project-light.png": "/nisha/static/media/project-light.b45d35889c6cceb3b736.png",
@@ -30,15 +29,16 @@
     "static/media/revicons.ttf": "/nisha/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/nisha/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/nav-icon3.svg": "/nisha/static/media/nav-icon3.08b285abb8e118b52637efa5d65c5367.svg",
+    "static/media/springboot.svg": "/nisha/static/media/springboot.9036912f9039e6261b567c1f0ee54b8d.svg",
     "index.html": "/nisha/index.html",
     "static/media/nav-icon1.svg": "/nisha/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/nisha/static/media/nav-icon2.8da9d409347b7ed79f849d878efe16a0.svg",
-    "main.07776f7d.css.map": "/nisha/static/css/main.07776f7d.css.map",
-    "main.1843bc9d.js.map": "/nisha/static/js/main.1843bc9d.js.map",
+    "main.f2276cfa.css.map": "/nisha/static/css/main.f2276cfa.css.map",
+    "main.e55ee693.js.map": "/nisha/static/js/main.e55ee693.js.map",
     "592.2b57b2b8.chunk.js.map": "/nisha/static/js/592.2b57b2b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07776f7d.css",
-    "static/js/main.1843bc9d.js"
+    "static/css/main.f2276cfa.css",
+    "static/js/main.e55ee693.js"
   ]
 }
