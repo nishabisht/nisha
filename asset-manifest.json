@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nisha/static/css/main.f2276cfa.css",
+    "main.css": "/nisha/static/css/main.e8df4ca3.css",
     "main.js": "/nisha/static/js/main.e55ee693.js",
     "static/js/592.2b57b2b8.chunk.js": "/nisha/static/js/592.2b57b2b8.chunk.js",
     "static/media/color-sharp.png": "/nisha/static/media/color-sharp.bea361cfef80fefc2d1e.png",
@@ -33,12 +33,12 @@
     "index.html": "/nisha/index.html",
     "static/media/nav-icon1.svg": "/nisha/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/nisha/static/media/nav-icon2.8da9d409347b7ed79f849d878efe16a0.svg",
-    "main.f2276cfa.css.map": "/nisha/static/css/main.f2276cfa.css.map",
+    "main.e8df4ca3.css.map": "/nisha/static/css/main.e8df4ca3.css.map",
     "main.e55ee693.js.map": "/nisha/static/js/main.e55ee693.js.map",
     "592.2b57b2b8.chunk.js.map": "/nisha/static/js/592.2b57b2b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2276cfa.css",
+    "static/css/main.e8df4ca3.css",
     "static/js/main.e55ee693.js"
   ]
 }
