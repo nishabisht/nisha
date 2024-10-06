@@ -14,7 +14,6 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <NavBar />
-        <Banner />
         <Skill />
         <Project />
         <Testimonial />

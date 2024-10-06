@@ -8,9 +8,8 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import TrackVisibility from "react-on-screen";
-
+import "animate.css";
 import "../App.css";
-// import "../assets/css/darkTheme.css";
 
 const Project = () => {
   const spring_react = [
@@ -117,7 +116,7 @@ const Project = () => {
       <Container>
         <Row>
           <Col size={12}>
-            <TrackVisibility>
+            <TrackVisibility once>
               {({ isVisible }) => (
                 <div
                   className={
@@ -133,16 +132,13 @@ const Project = () => {
                     development with React to full-stack applications using
                     Spring Boot.
                   </p>
-                  <Tab.Container
-                    id="projects-tab my-2"
-                    defaultActiveKey="first"
-                  >
-                    <Nav variant="pills" defaultActiveKey="first">
+                  <Tab.Container id="projects-tab" defaultActiveKey="first">
+                    <Nav variant="pills" className="justify-content-center">
                       <Nav.Item>
                         <Nav.Link eventKey="first">React</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Springboot/React</Nav.Link>
+                        <Nav.Link eventKey="second">Springboot</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="third">Bootstrap</Nav.Link>
@@ -150,23 +146,47 @@ const Project = () => {
                     </Nav>
                     <Tab.Content>
                       <Tab.Pane eventKey="second">
-                        <Row>
-                          {spring_react.map((spring_react, index) => (
-                            <ProjectCard key={index} {...spring_react} />
+                        <Row className="animate__animated animate__fadeInUp">
+                          {spring_react.map((project, index) => (
+                            <Col
+                              key={index}
+                              xs={12}
+                              md={6}
+                              lg={4}
+                              className="mb-4"
+                            >
+                              <ProjectCard key={index} {...project} />
+                            </Col>
                           ))}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="first">
-                        <Row>
-                          {react.map((react, index) => (
-                            <ProjectCard key={index} {...react} />
+                        <Row className="animate__animated animate__fadeInUp">
+                          {react.map((project, index) => (
+                            <Col
+                              key={index}
+                              xs={12}
+                              md={6}
+                              lg={4}
+                              className="mb-4"
+                            >
+                              <ProjectCard key={index} {...project} />
+                            </Col>
                           ))}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <Row>
-                          {bootstrap.map((bootstrap, index) => (
-                            <ProjectCard key={index} {...bootstrap} />
+                        <Row className="animate__animated animate__fadeInUp">
+                          {bootstrap.map((project, index) => (
+                            <Col
+                              key={index}
+                              xs={12}
+                              md={6}
+                              lg={4}
+                              className="mb-4"
+                            >
+                              <ProjectCard key={index} {...project} />
+                            </Col>
                           ))}
                         </Row>
                       </Tab.Pane>
@@ -178,7 +198,6 @@ const Project = () => {
           </Col>
         </Row>
       </Container>
-      {/* <img className="background-image-right" src={colorSharp2}></img> */}
     </section>
   );
 };

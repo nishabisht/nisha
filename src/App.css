@@ -78,6 +78,45 @@ select:focus {
 }
 
 /************ Navbar Css ************/
+
+/* Main styles for navbar */
+/* In App.css or Navbar.css */
+@media (max-width: 768px) {
+  .navbar-text {
+    text-align: center;
+  }
+
+  .navbar-link {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .vvd {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 20px; /* Add margin to prevent button touching the edges */
+    margin-right: 20px;
+  }
+
+  .theme-toggle-btn {
+    width: 100%;
+    margin-left: 20px; /* Add margin to prevent button touching the edges */
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  .social-icon {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+/* AI css */
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -147,7 +186,6 @@ span.navbar-text {
   font-weight: 500;
   padding: 5px 5px;
   font-size: 16px;
-  margin: 12px 12px;
   position: relative;
   transition: 0.3s ease-in-out;
 }
@@ -208,10 +246,90 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 /************ Banner Css ************/
-.banner {
-  margin-top: 0;
-  padding: 260px 0 100px;
+/* In Banner.css or App.css */
+
+.tagline {
+  font-size: 24px;
 }
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.wrap {
+  font-size: 32px;
+  min-height: 38px; /* Ensures placeholder space during hiding */
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out; /* Smooth transitions */
+}
+
+.description {
+  font-size: 18px;
+}
+
+.contact-btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Fade-in/out effect */
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Responsive Styling */
+.banner {
+  padding-top: 80px;
+}
+
+@media (min-width: 992px) {
+  .banner {
+    padding: 140px 0;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .banner {
+    text-align: center;
+    padding: 110px 0px;
+  }
+  .banner.nav-expanded {
+    padding: 335px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .wrap {
+    font-size: 24px;
+  }
+
+  .header-img {
+    margin-top: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .contact-btn {
+    font-size: 16px;
+  }
+}
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -237,14 +355,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 .banner button {
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
 }
 .banner button svg {
   font-size: 25px;
-  margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
@@ -268,6 +384,58 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 /************ Skills Css ************/
+.skill-bx {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.skill-slider .item {
+  padding: 20px;
+  text-align: center;
+}
+
+.skill-img {
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.carousel-wrapper {
+  display: none; /* Hide carousel by default (only show on larger screens) */
+}
+
+.grid-wrapper {
+  display: block; /* Display grid by default */
+}
+
+.skill-grid-item {
+  margin-bottom: 20px;
+}
+
+.skill-grid-item h5 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.skill-img {
+  max-width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive styling */
+@media (min-width: 768px) {
+  .grid-wrapper {
+    display: none; /* Hide grid on larger screens */
+  }
+
+  .carousel-wrapper {
+    display: block; /* Show carousel on larger screens */
+  }
+}
+
+/* AI CSS */
+
 .skill {
   padding: 0 0 50px;
   position: relative;
@@ -304,6 +472,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 /************ Projects Css ************/
+@media (min-width: 768px) {
+  .project .nav.nav-pills {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .project .nav.nav-pills {
+    width: 72%;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+}
+
 .project {
   padding: 50px 0;
   position: relative;
@@ -321,18 +505,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   text-align: center;
   width: 56%;
 }
-.project .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 50px;
-}
+
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
-  border-radius: 0;
+  /* border-radius: 0; */
   padding: 17px 0;
-  width: 100%;
+  /* width: 100%; */
   font-size: 17px;
   letter-spacing: 0.8px;
   font-weight: 500;
@@ -405,6 +585,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 
 /************ Testimonial Css ************/
+/* Testimonials Section */
+.testimonials {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+/* Carousel Mobile View */
+.carousel-item {
+  padding: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+}
+
+/* Grid for Desktop */
+@media (min-width: 768px) {
+  .testimonials .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .testimonials .col {
+    flex: 1 1 25%;
+  }
+}
+/* AI CSS */
+
 .testimonials {
   padding: 50px 0;
   position: relative;
@@ -537,7 +756,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   font-weight: 700;
   padding: 14px 48px;
   font-size: 18px;
-  margin-top: 25px;
   border-radius: 0;
   position: relative;
   transition: 0.3s ease-in-out;
@@ -604,7 +822,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   padding: 20px 65px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  border-radius: 18px;
+  /* border-radius: 18px; */
 }
 .footer img {
   width: 26%;

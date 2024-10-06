@@ -5,7 +5,7 @@ import "../App.css";
 
 export default function ProjectCard({ title, description, imgUrl, link }) {
   return (
-    <Col sm={12} md={6} lg={4} className="mt-3 d-flex justify-content-center">
+    <Col className="mt-3 d-flex justify-content-center">
       <div className="proj-imgbx">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <img src={imgUrl} alt={title} className="project-img rounded" />
