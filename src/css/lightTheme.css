@@ -71,6 +71,20 @@
     rgba(150, 132, 232, 1) 89%
   );
 }
+/***************Animation color pallet********************/
+/* palette: https://flatuicolors.com/palette/defo */
+
+.light-theme .gredient-first {
+  color: #6071dd;
+}
+
+.light-theme .gredient-second {
+  color: #cca8ff;
+}
+
+.light-theme .gredient-third {
+  color: #9785e9;
+}
 
 /* Banner Section */
 .light-theme .banner {
@@ -109,6 +123,7 @@
     rgba(76, 106, 216, 1) 7%,
     rgba(150, 132, 232, 1) 89%
   );
+  color: #ffffff;
   box-shadow: 5px 10px 18px #c4c8e9;
 }
 
@@ -178,6 +193,11 @@
     rgba(150, 132, 232, 1) 89%
   );
 }
+
+.light-theme .proj-imgbx {
+  border: 2px solid rgb(76 106 216);
+  box-shadow: 5px 10px 18px #c4c8e9;
+}
 .light-theme .proj-imgbx {
   color: #ffffff;
 }
@@ -189,6 +209,61 @@
   right: 0;
   z-index: -4;
 }
+
+#live {
+  background: url(./../assets/img/liveIcon.svg);
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+#live:hover {
+  transform: scale(1.7); /* Pop out effect */
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#github {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease-out;
+  background-image: url("./../assets/img/githubIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+}
+
+.light-theme #github:hover {
+  transform: scale(1.7); /* Pop out effect */
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/**********Tools Section**************/
+.light-theme .tools {
+  background-color: #ede8ff;
+  padding: 2%;
+}
+
+.light-theme .tool-item:hover {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    118deg,
+    rgba(76, 106, 216, 1) 7%,
+    rgba(150, 132, 232, 1) 89%
+  );
+  color: #ffffff;
+  box-shadow: 5px 10px 18px #c4c8e9;
+}
+.light-theme .tool-item {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: 5px 10px 18px #c4c8e9;
+}
+
 /************ Contact Css ************/
 .light-theme .contact h2 {
   color: #ffffff;
@@ -298,4 +373,9 @@
 
 .light-theme .testimonials {
   background-color: #ede8ff;
+  background-image: url("../assets/img/footer-bg-light.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: ffffff; /* Added a subtle background color */
 }

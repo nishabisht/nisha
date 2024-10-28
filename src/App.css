@@ -244,6 +244,90 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   height: 70px;
   margin-left: 20px;
 }
+/*****************Animation CSS********************/
+
+.rotating-text {
+  font-family: "Centra", sans-serif !important;
+  font-size: 40px;
+  font-weight: 1000;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  color: white;
+  transform: translateX(0); /* Centered instead of negative translate */
+  position: relative; /* Ensure it stays within its container */
+  overflow: hidden; /* Prevent overflow causing horizontal scroll */
+  max-width: 100%; /* Ensure it doesn't exceed container width */
+
+  span {
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+    position: relative;
+
+    .word {
+      position: absolute;
+      display: flex;
+      opacity: 0;
+      white-space: nowrap; /* Prevent wrapping */
+      transition: opacity 0.4s ease; /* Smooth fade in/out */
+
+      .letter {
+        transform-origin: right center 25px;
+
+        &.out {
+          transform: rotateX(90deg);
+          transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+        }
+
+        &.in {
+          transition: 0.38s ease;
+        }
+
+        &.behind {
+          transform: rotateX(-90deg);
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 1024px) {
+  .rotating-text {
+    font-size: 30px;
+    transform: translateX(0); /* Center the text */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rotating-text {
+    font-size: 25px;
+    transform: translateX(0); /* Ensure centered on tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rotating-text {
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    line-height: 1.2; /* Improve readability on small screens */
+    transform: translateX(0); /* No need for negative translation */
+  }
+
+  .rotating-text {
+    span {
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+    }
+  }
+
+  span .word {
+    position: relative; /* Prevent absolute positioning from disrupting layout */
+    white-space: nowrap; /* Ensure words don't wrap on small screens */
+  }
+}
 
 /************ Banner Css ************/
 /* In Banner.css or App.css */
@@ -333,9 +417,9 @@ h1 {
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 8px 10px;
+  padding: 5px 10px;
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 .banner h1 {
@@ -343,7 +427,7 @@ h1 {
   font-weight: 1000;
   letter-spacing: 0.8px;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
 }
 .banner p {
@@ -389,16 +473,16 @@ h1 {
   padding: 40px 0;
 }
 
+/* 
 .skill-slider .item {
   padding: 20px;
   text-align: center;
 }
 
 .skill-img {
-  max-width: 100px;
   margin: 0 auto;
   display: block;
-}
+} */
 
 .carousel-wrapper {
   display: none; /* Hide carousel by default (only show on larger screens) */
@@ -418,9 +502,8 @@ h1 {
 }
 
 .skill-img {
-  max-width: 80px;
+  min-width: 80px;
   display: block;
-  margin: 0 auto;
 }
 
 /* Responsive styling */
@@ -435,6 +518,17 @@ h1 {
 }
 
 /* AI CSS */
+
+.react-multiple-carousel__arrow::before {
+  font-size: 28px !important;
+  color: #0f0e0e52 !important;
+  background: #f7f6f6ef !important;
+  border-radius: 58%;
+}
+.react-multiple-carousel__arrow:hover {
+  color: #030303 !important;
+  background: #ffffff !important;
+}
 
 .skill {
   padding: 0 0 50px;
@@ -463,7 +557,7 @@ h1 {
 }
 .skill-slider .item img {
   width: 100px;
-  height: 120px;
+  height: 100px;
   border-radius: 10px;
 }
 .skill-slider .item img {
@@ -548,7 +642,7 @@ h1 {
 
 .proj-imgbx::before {
   content: "";
-  opacity: 0.85;
+  opacity: 0.9;
   position: absolute;
   width: 100%;
   height: 0;
@@ -583,9 +677,59 @@ h1 {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+/***************Tools css********************/
+.tools h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tool-icon {
+  width: 45px;
+}
+
+.tools {
+  padding: 60px 0; /* Add some vertical padding */
+}
+
+.tool-item {
+  transition: transform 0.2s ease; /* Add transition effect */
+  padding: 20px; /* Add padding to the item */
+  border-radius: 10px; /* Round corners */
+  background-color: #f8f9fa; /* Light background for contrast */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.tool-item:hover {
+  transform: scale(1.05); /* Slightly scale on hover */
+}
+
+.tool-img {
+  max-width: 80%; /* Limit the size of the images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .tool-item {
+    padding: 15px; /* Adjust padding on smaller screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .tool-item {
+    padding: 20px; /* Add more padding on larger screens */
+  }
+}
 
 /************ Testimonial Css ************/
 /* Testimonials Section */
+.testimonials h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .testimonials {
   padding: 60px 0;
   text-align: center;
@@ -598,7 +742,6 @@ h1 {
 
 .testimonial p {
   font-size: 18px;
-  color: #6c757d;
 }
 
 /* Carousel Mobile View */
@@ -608,7 +751,75 @@ h1 {
 
 .carousel-control-prev,
 .carousel-control-next {
-  filter: invert(100%);
+  display: hidden;
+  color: transparent !important;
+}
+/* Modern Carousel Container */
+.modern-carousel-container {
+  position: relative;
+  max-width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Modern Carousel Item */
+.carousel-item-modern {
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Custom Arrow Buttons */
+.custom-arrow {
+  background-color: black; /* Black background for the arrow */
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+}
+
+.prev-arrow {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Icon Sizing */
+.custom-arrow svg {
+  font-size: 24px; /* Size of the arrow icons */
+}
+
+@media (max-width: 768px) {
+  /* Responsive Adjustments */
+  .custom-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .custom-arrow svg {
+    font-size: 18px;
+  }
 }
 
 /* Grid for Desktop */
@@ -726,7 +937,7 @@ h1 {
 
 /************ Contact Css ************/
 .contact {
-  padding: 60px 0 200px;
+  padding: 50px 0 200px;
 }
 .contact img {
   width: 92%;

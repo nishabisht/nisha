@@ -1,12 +1,14 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import portfolio from "../assets/img/portfolio.jpg";
-import react_clone from "../assets/img/react_clone.jpg";
-import custom_card from "../assets/img/custom_card.jpg";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import ABC_bank from "../assets/img/project/ABC_bank.jpg";
+import bmi_portal from "../assets/img/project/bmiCal.jpg";
+import currency_coverter from "../assets/img/project/currency_converter.jpg";
+import ecomShop from "../assets/img/project/ecomShop.jpg";
+import handPan from "../assets/img/project/HandPan.jpg";
+import React_clone from "../assets/img/project/react_clone.jpg";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
 import "../App.css";
@@ -16,61 +18,71 @@ const Project = () => {
     {
       title: "Daily Aid App",
       description:
-        "The Daily Aid App is a Spring Boot application designed to manage daily amenities services, with user authentication and role-based access controls (e.g., user, admin).",
+        "The Daily Aid App is a Spring Boot application designed to manage daily amenities services with JWT authentication.",
       imgUrl: projImg1,
       link: "https://github.com/nishabisht/daily-aid-springboot",
+      gitLink: "https://github.com/nishabisht/daily-aid-springboot",
     },
     {
-      title: "Ecom Pet Store",
+      title: "Pet Store Backend",
       description:
         "The Ecom Pet Store is an online platform for purchasing pet products, accessories, and supplies, offering a wide variety of items for different pets.",
       imgUrl: projImg1,
+      link: "https://github.com/nishabisht/peer-pet_springboot",
+      gitLink: "https://github.com/nishabisht/peer-pet_springboot",
     },
     {
-      title: "To Do App",
+      title: "bookNest Backend",
       description:
-        "The To Do App is a task management application designed to help users organize, track, and prioritize their daily tasks and activities.",
+        "The BookNest app is a digital library platform designed to help users organize, track, and manage their books and book-related transactions.",
       imgUrl: projImg2,
-    },
-    {
-      title: "E-Learning Website",
-      description:
-        "An online platform for educational content and courses, designed for interactive learning.",
-      imgUrl: projImg3,
+      link: "https://github.com/nishabisht/book-nest-springboot",
+      gitLink: "https://github.com/nishabisht/book-nest-springboot",
     },
   ];
   const react = [
     {
-      title: "Portfolio",
-      description:
-        "A personal portfolio website showcasing projects and skills.",
-      imgUrl: portfolio,
-    },
-    {
       title: "React.dev Clone",
       description:
         "A clone of the React.dev website, demonstrating React skills.",
-      imgUrl: react_clone,
+      imgUrl: React_clone,
+      link: "https://nishabisht.github.io/react_site_clone/",
+      gitLink: "https://github.com/nishabisht/react_site_clone",
     },
     {
-      title: "Ecommerce Website",
+      title: "Ecom Website",
       description: "An online store for various products, built with React.",
-      imgUrl: projImg3,
+      imgUrl: ecomShop,
+      link: "https://nishabisht.github.io/digital_shop_react/",
+      gitLink: "https://github.com/nishabisht/digital_shop_react",
     },
     {
-      title: "Custom Card Website",
+      title: "Pet Shop",
       description: "A website for creating and customizing greeting cards.",
       imgUrl: projImg1,
+      link: "",
+      gitLink: "https://github.com/nishabisht/peer-pet_react",
     },
     {
       title: "BMI Calculator",
       description: "A tool for calculating Body Mass Index, built with React.",
-      imgUrl: projImg2,
+      imgUrl: bmi_portal,
+      link: " https://nishabisht.github.io/bmi-calculator/",
+      gitLink: "https://github.com/nishabisht/bmi-calculator",
     },
     {
       title: "Currency Converter",
       description: "A web app for converting currencies, built with React.",
-      imgUrl: projImg3,
+      imgUrl: currency_coverter,
+      link: " https://nishabisht.github.io/currency_converter_react/",
+      gitLink: "https://github.com/nishabisht/currency_converter_react",
+    },
+    {
+      title: "ABC Bank Portal",
+      description: "A website for digital netbanking, built with React.",
+      imgUrl: ABC_bank,
+      link: "  https://nishabisht.github.io/abc_bank_ui/",
+      gitLink: "https://github.com/nishabisht/abc_bank_ui",
     },
   ];
   const bootstrap = [
@@ -78,36 +90,9 @@ const Project = () => {
       title: "HandPan UI",
       description:
         "A user interface for a HandPan musical instrument application.",
-      imgUrl: projImg1,
-    },
-    {
-      title: "React.dev Clone",
-      description:
-        "A clone of the React.dev website, demonstrating Bootstrap integration.",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Ecommerce Website",
-      description:
-        "An online store for various products, built with Bootstrap.",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Ecom Pet Store",
-      description:
-        "An online platform for purchasing pet products, built with Bootstrap.",
-      imgUrl: projImg1,
-    },
-    {
-      title: "To Do App",
-      description: "A task management application, built with Bootstrap.",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Custom Card Website",
-      description:
-        "An online platform for educational content and courses, built with Bootstrap.",
-      imgUrl: custom_card,
+      imgUrl: handPan,
+      link: " https://nishabisht.github.io/handPan_bootstrap/",
+      gitLink: "https://github.com/nishabisht/handPan_bootstrap",
     },
   ];
 

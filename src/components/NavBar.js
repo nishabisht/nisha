@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/img/logo.png";
 import Sicon1 from "../assets/img/nav-icon1.svg";
 import Sicon2 from "../assets/img/nav-icon2.svg";
-import Sicon3 from "../assets/img/nav-icon3.svg";
+import Sicon3 from "../assets/img/naukri.svg";
 import { ThemeContext } from "../components/ThemeContext";
 import Banner from "./Banner";
 
@@ -106,7 +106,7 @@ function NavBar() {
                   <img src={Sicon2} alt="GitHub" />
                 </a>
                 <a
-                  href="https://www.instagram.com/aishabisht2000/"
+                  href="https://www.naukri.com/mnjuser/profile"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

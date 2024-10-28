@@ -3,7 +3,7 @@ import { MailchimpForm } from "./MailChimpForm";
 import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import navIcon3 from "../assets/img/naukri.svg";
 // import "../assets/css/darkTheme.css";
 
 export const Footer = () => {
@@ -32,7 +32,7 @@ export const Footer = () => {
                 <img src={navIcon2} alt="Icon" />
               </a>
               <a
-                href="https://www.instagram.com/aishabisht2000/"
+                href="https://www.naukri.com/mnjuser/profile"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -1,22 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import TestimonialCard from "./TestimonialCard";
 import yellowNote from "../assets/img/yellownote.png";
 import greenNote from "../assets/img/greenNote.png";
 import pinkNote from "../assets/img/pinkNote.png";
 import blueNote from "../assets/img/blueNote.png";
 import StickyNote from "./StickyNote";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 import Carousel from "react-bootstrap/Carousel";
 
 // import "../assets/css/darkTheme.css";
 
 const Testimonial = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
   const testimonials = [
     {
       text: "This portfolio is outstanding! The design is clean and professional.",
-      author: "Nisha Bisht",
+      author: "Lalita Bisht",
       backgroundImage: yellowNote,
     },
     {
@@ -26,7 +32,7 @@ const Testimonial = () => {
     },
     {
       text: "Highly recommend! The creativity and skill are evident in every project.",
-      author: "Akash",
+      author: "Akash Trivedi",
       backgroundImage: pinkNote,
     },
     {
@@ -64,9 +70,26 @@ const Testimonial = () => {
         {isMobile ? (
           <Row>
             <Col>
-              <Carousel>
+              <Carousel
+                activeIndex={index}
+                onSelect={handleSelect}
+                controls={true}
+                indicators={
+                  false
+                } /* Disable indicators if you don't want them */
+                prevIcon={
+                  <div className="custom-arrow prev-arrow">
+                    <FaChevronLeft />
+                  </div>
+                } /* Custom Previous Arrow */
+                nextIcon={
+                  <div className="custom-arrow next-arrow">
+                    <FaChevronRight />
+                  </div>
+                } /* Custom Next Arrow */
+              >
                 {testimonials.map((testimonial, index) => (
-                  <Carousel.Item key={index}>
+                  <Carousel.Item key={index} className="carousel-item-modern">
                     <div className="d-flex justify-content-center">
                       <StickyNote
                         testimonial={testimonial.text}

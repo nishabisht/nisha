@@ -1,37 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
-// import "../assets/css/darkTheme.css";
+import rotateText from "../TextRotation.js"; // Updated import
 
 export default function Banner({ isNavExpanded }) {
-  const [toRotate, setToRotate] = useState([
-    "Software Engineer",
-    "FullStack Developer",
-    "Support Engineer",
-  ]);
-  const [loopNum, setLoopNum] = useState(0);
-  const [text, setText] = useState("");
-  const [isVisible, setIsVisible] = useState(true); // Controls visibility
-
-  const wordDisplayTime = 2000; // Time to keep the word visible (2 seconds)
-  const hideDuration = 500; // Time during which the word is hidden (0.5 seconds)
-
+  // Integrating the animation after the component has mounted
   useEffect(() => {
-    const rotateWords = () => {
-      setIsVisible(false); // Start by hiding the text
-      setTimeout(() => {
-        setLoopNum((prevLoopNum) => (prevLoopNum + 1) % toRotate.length); // Move to the next word
-        setText(toRotate[loopNum]);
-        setIsVisible(true); // Show the new word
-      }, hideDuration); // Hide for a short period before showing the next word
-    };
-
-    const interval = setInterval(rotateWords, wordDisplayTime + hideDuration);
-
-    return () => clearInterval(interval); // Clean up on component unmount
-  }, [loopNum, toRotate]);
+    rotateText(); // Call the rotateText function from TextRotation.js
+  }, []);
 
   return (
     <section
@@ -44,17 +22,34 @@ export default function Banner({ isNavExpanded }) {
             <span className="tagline">Welcome to My Creative Space</span>
             <h1>{"Hi! I'm Nisha Bisht"}</h1>
             <h1>
-              <span className={`wrap ${isVisible ? "fade-in" : "fade-out"}`}>
-                {text}
+              <span className="rotating-text">
+                <span>
+                  <span className="word gredient-first">
+                    FullStack Developer.
+                  </span>
+                  <span className="word gredient-second">
+                    Support Engineer.
+                  </span>
+                  <span className="word gredient-third">
+                    Software Engineer.
+                  </span>
+                  <span className="word gredient-first">
+                    Backend Developer.
+                  </span>
+                  <span className="word gredient-second">
+                    Application Support Engineer.
+                  </span>
+                </span>
               </span>
             </h1>
+
+            {/* Rotating text section for words animation */}
+
             <p className="description">
-              Software engineer with 2 years of experience in software
-              engineering and production support. Proficient in developing and
-              troubleshooting Java applications, with a strong background in
-              computer science. Committed to delivering high-quality software
-              solutions through technical expertise and innovative
-              problem-solving.
+              I’m a passionate Software Engineer focused on building
+              high-performance, scalable applications. With expertise in
+              problem-solving and a commitment to continuous learning, I thrive
+              on delivering innovative solutions that drive business success.
             </p>
             <button
               className="contact-btn"

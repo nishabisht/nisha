@@ -54,6 +54,21 @@
   border: 2px solid rgb(0, 0, 0);
   background: rgb(255, 255, 255);
 }
+/***************Animation color pallet********************/
+/* palette: https://flatuicolors.com/palette/defo */
+
+.dark-theme .gredient-first {
+  color: #5a3fd4;
+}
+
+.dark-theme .gredient-second {
+  color: #a03583;
+}
+
+.dark-theme .gredient-third {
+  color: #ffffff;
+}
+
 /* Banner Section */
 .dark-theme .banner {
   background-image: url("../assets/img/banner-bg.png");
@@ -121,19 +136,19 @@
   transition: 0.3s ease-in-out;
 }
 .dark-theme .project .nav.nav-pills .nav-link.active {
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 2px solid #5530b5;
 }
 
 .dark-theme .nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #5530b5;
   border-radius: 55px 0px 0px 55px;
 }
 .dark-theme .nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #5530b5;
+  border-bottom: 1px solid #5530b5;
 }
 .dark-theme .nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #5530b5;
   border-radius: 0 55px 55px 0;
 }
 .dark-theme .proj-imgbx::before {
@@ -146,6 +161,42 @@
   width: 35%;
   right: 0;
   z-index: -4;
+}
+.dark-theme .proj-imgbx {
+  border: 2px solid #aa367c;
+  box-shadow: 5px 10px 18px #291a64;
+}
+
+#live {
+  background: url(./../assets/img/liveIcon.svg);
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+#live:hover {
+  transform: scale(1.7); /* Pop out effect */
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#github {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease-out;
+  background-image: url("./../assets/img/githubIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+}
+
+.dark-theme #github:hover {
+  transform: scale(1.7); /* Pop out effect */
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /************ Projects Css ************/
@@ -185,6 +236,30 @@
 }
 .dark-theme .contact form button::before {
   background: #121212;
+}
+/***************Tool css****************/
+.dark-theme .tools {
+  background-image: url("../assets/img/footer-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .tool-item {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: 5px 10px 18px #552d52;
+}
+.dark-theme .tool-item:hover {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
+  color: #ffffff;
+  box-shadow: 5px 10px 18px #362851;
 }
 
 /************ Footer Css ************/
