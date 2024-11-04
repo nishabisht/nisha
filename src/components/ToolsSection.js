@@ -1,33 +1,86 @@
 import React from "react";
 import "../App.css"; // Include your CSS file
 import { Container, Row, Col } from "react-bootstrap";
-import { useEffect, useRef } from "react";
 import toolIcon from "../assets/img/tool.svg";
 
 const ToolsSection = () => {
   const businessTool = [
-    { toolName: "Github", name: "GitHub" },
-    { toolName: "NewRelic", name: "JavaScript" },
-    { toolName: "Splunk", name: "Java" },
-    { toolName: "Glassbox", name: "React" },
-    { toolName: "Rancher", name: "Bootstrap" },
-    { toolName: "Jenkin", name: "Spring Boot" },
-    { toolName: "GLPI", name: "Spring Boot" },
-    { toolName: "Jira", name: "Spring Boot" },
-    { toolName: "Intellij", name: "Spring Boot" },
-    { toolName: "Eclipse", name: "Spring Boot" },
-    { toolName: "vsCode", name: "Spring Boot" },
-    { toolName: "Postman", name: "Spring Boot" },
+    {
+      toolName: "GitHub",
+      shortDescription: "Organize and manage code repositories",
+    },
+    {
+      toolName: "New Relic",
+      shortDescription: "Monitor application performance and health",
+    },
+    {
+      toolName: "Splunk",
+      shortDescription: "Track and analyze application logs",
+    },
+    {
+      toolName: "Glassbox",
+      shortDescription: "Record and analyze user sessions",
+    },
+    {
+      toolName: "Rancher",
+      shortDescription: "Manage and deploy Kubernetes clusters",
+    },
+    {
+      toolName: "Jenkins",
+      shortDescription: "Automate builds and CI/CD pipelines",
+    },
+    {
+      toolName: "GLPI",
+      shortDescription: "Ticketing and asset management tool",
+    },
+    {
+      toolName: "Jira",
+      shortDescription: "Project management and sprint tracking",
+    },
+    {
+      toolName: "IntelliJ",
+      shortDescription: "Java development IDE, ideal for Spring Boot",
+    },
+    {
+      toolName: "Eclipse",
+      shortDescription: "Java IDE for application development",
+    },
+    {
+      toolName: "VS Code",
+      shortDescription: "Lightweight, versatile code editor",
+    },
+    {
+      toolName: "Postman",
+      shortDescription: "API development and testing tool",
+    },
   ];
+
   const AITool = [
-    { toolName: "personal Assistant", name: "Spring Boot" },
-    { toolName: "Github Copilot", name: "Spring Boot" },
-    { toolName: "ChatGpt", name: "Spring Boot" },
+    {
+      toolName: "Personal Assistant",
+      shortDescription: "AI-based virtual assistant",
+    },
+    {
+      toolName: "GitHub Copilot",
+      shortDescription: "AI-powered coding assistant",
+    },
+    { toolName: "ChatGPT", shortDescription: "Conversational AI model" },
   ];
+
   const CommunicationTool = [
-    { toolName: "Outlook", name: "Spring Boot" },
-    { toolName: "MS Team", name: "Spring Boot" },
-    { toolName: "Zoom", name: "Spring Boot" },
+    { toolName: "Outlook", shortDescription: "Microsoft email client" },
+    {
+      toolName: "MS Teams",
+      shortDescription: "Microsoft chat and collaboration platform",
+    },
+    {
+      toolName: "Zoom",
+      shortDescription: "Video conferencing and meeting platform",
+    },
+    {
+      toolName: "OpsGenie",
+      shortDescription: "Incident alert and on-call management tool",
+    },
   ];
 
   return (
@@ -85,7 +138,9 @@ const ToolsSection = () => {
           {CommunicationTool.map((tool, index) => (
             <Col xs={6} sm={4} md={3} lg={2} className="mb-4" key={index}>
               <div className="tool-item">
-                <h5>{tool.toolName}</h5>
+                <h5 data-toggle="modal" data-target="#exampleModal">
+                  {tool.toolName}
+                </h5>
               </div>
             </Col>
           ))}
