@@ -252,6 +252,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   font-weight: 1000;
   letter-spacing: 0.8px;
   line-height: 1;
+  text-align: center;
   color: white;
   transform: translateX(0); /* Centered instead of negative translate */
   position: relative; /* Ensure it stays within its container */
@@ -296,6 +297,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 @media screen and (max-width: 1024px) {
   .rotating-text {
     font-size: 30px;
+    text-align: center;
     transform: translateX(0); /* Center the text */
   }
 }
@@ -303,6 +305,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 @media screen and (max-width: 768px) {
   .rotating-text {
     font-size: 25px;
+    text-align: center !important;
     transform: translateX(0); /* Ensure centered on tablets */
   }
 }
@@ -311,6 +314,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   .rotating-text {
     font-size: 25px;
     letter-spacing: 0.5px;
+    text-align: center;
     line-height: 1.2; /* Improve readability on small screens */
     transform: translateX(0); /* No need for negative translation */
   }
@@ -320,6 +324,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
       justify-content: center;
       align-items: center;
       vertical-align: middle;
+      text-align: center;
     }
   }
 
