@@ -56,7 +56,7 @@ a:hover {
 }
 
 img {
-  width: 100%;
+  width: 75%;
   height: auto;
 }
 
@@ -388,6 +388,7 @@ h1 {
   .banner {
     text-align: center;
     padding: 110px 0px;
+    margin: 65px 0px;
   }
   .banner.nav-expanded {
     padding: 335px 0;
@@ -412,6 +413,27 @@ h1 {
   .contact-btn {
     font-size: 16px;
   }
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    padding: 40px 0;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}
+
+.banner-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner h1 {
+  font-size: 5vw; /* Scales based on viewport width */
 }
 
 .banner .tagline {
